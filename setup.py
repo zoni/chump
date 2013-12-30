@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-
-import chump
+import os.path
 
 
 try:
@@ -22,12 +21,12 @@ if sys.version_info >= (3,):
 
 setup(
 	name="chump",
-	version=chump.__version__,
+	version=open(os.path.join(os.path.dirname(__file__), "chump", "version")).read().strip(),
 	description="A fully featured API wrapper for Pushover.",
 	long_description="\n\n".join([open('README.rst', 'rU').read(), open('HISTORY.rst', 'rU').read()]),
-	author=chump.__author__,
-	author_email=chump.__contact__,
-	url=chump.__homepage__,
+	author='Karan Lyons',
+	author_email='karan@karanlyons.com',
+	url='https://github.com/karanlyons/chump',
 	license=open('LICENSE', 'rU').read(),
 	packages=['chump'],
 	package_dir={'chump': 'chump'},

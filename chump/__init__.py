@@ -9,12 +9,11 @@ from datetime import datetime
 from email.utils import parsedate
 
 import requests
+import os.path
 
-
-VERSION = (1, 3, 1)
 
 __title__ = 'Chump'
-__version__ = '.'.join((str(i) for i in VERSION)) # str for compatibility with setup.py under Python 3.
+__version__ = open(os.path.join(os.path.dirname(__file__), "version")).read().strip()
 __author__ = 'Karan Lyons'
 __contact__ = 'karan@karanlyons.com'
 __homepage__ = 'https://github.com/karanlyons/chump'
